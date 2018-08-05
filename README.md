@@ -1,10 +1,6 @@
 Template Wordpress Ártico Digital
 ===
 
- `webpack`
-
-Instalación para proyectos nuevos
+FabialElPublicista
 ---------------
 
-1. Ir al repo
-# guayacan
