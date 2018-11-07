@@ -1,0 +1,36 @@
+.Social {
+  @include respond-to(medium){
+    padding: 2rem 0 2rem 4rem;
+  }
+  &-newsletter {
+    background: #EDEFF1;
+    border: .1rem solid #D9D9DD;
+    padding: 1.2rem 1.5rem;
+    margin: 2.2rem 0;
+  }
+  &-h4 {
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  &-p {
+    color: #6C6D6E;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+  }
+  &-input {
+    padding: 1rem 1.6rem !important;
+    border-radius: .6rem;
+    margin: 2rem 0 1rem;
+    border: .1rem solid #D9D9DD;
+  }
+  &-button {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border-radius: .3rem;
+    font-weight: 800;
+    padding: 1rem 1.4rem;
+    margin: 0 0 1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,82 @@
+.Footer {
+  color: white;
+  background: var(--primary-color);
+  padding: 0 1rem ;
+  @include respond-to(medium){
+    height: 382px;
+    margin-top: 12rem;
+  }
+  &-container {
+    max-width: 100rem;
+    margin: auto;
+  }
+  &-links {
+    text-align: right;
+    li:nth-child(2n + 1) a {
+      color: #ff0080;
+    }
+    a {
+      display: block;
+      color: var(--secondary-color);
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 100;
+      line-height: 1.2em;
+    }
+    span {
+      margin: 1rem;
+      &:nth-child(2) {
+        margin: 1rem;
+        display: block;
+      }
+    }
+    ul{
+      display: none;
+      @include respond-to(medium){
+        display: block;
+      }
+    }
+  }
+  &-p {
+    font-size: 1.4rem;
+    font-weight: 100;
+  }
+  &-h3 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  &-linkTutorials {
+    background: #ff0080;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    margin: auto;
+  }
+  &-image {
+    position: absolute;
+    top: -4rem;
+  }
+  &-figure {
+    display: none;
+    position: relative;
+    @include respond-to(medium){
+      display: block;
+    }
+  }
+  &-copy {
+    a {
+      display: inline;
+      color: red
+    }
+  }
+  &-fuck {
+    position: relative;
+    img {
+      position: absolute;
+      top: -1.4rem;
+      left: 0;
+    }
+  }
+}

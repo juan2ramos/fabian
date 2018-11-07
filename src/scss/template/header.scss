@@ -1,34 +1,126 @@
+body.open {
+  overflow-y: hidden;
+}
 
 Header {
-  background: #F4EBCD;
+  position: absolute;
+  width: 100vw;
+  min-height: 14.5rem;
 }
-.Header-social{
-  padding: 1rem 0;
+
+.home Header {
+  background: #F4EBCD;
   position: relative;
-  i{
+}
+
+.Header-social {
+  padding: 1rem 0 .5rem;
+  position: relative;
+  z-index: 100;
+  i {
     padding-right: 1rem;
+    display: none;
+    @include respond-to(medium) {
+      display: block;
+    }
+  }
+  span {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 .4rem 0;
   }
 }
-.Header-logo{
+
+.Header-logo {
   position: absolute;
   left: 0;
   top: 1rem;
   z-index: 100;
-  img{
+  img {
     max-width: 17rem;
   }
 }
-nav{
+
+nav {
   background: #FFCE42;
   text-transform: uppercase;
-  a{
-    color: #00185E  ;
+  position: relative;
+  z-index: 10;
+  min-height: 4.2rem;
+
+  a {
+    color: #00185E;
+    font-size: 1.4rem;
   }
-  li{
-    padding: 1.5rem 1rem 1.2rem;
+  li {
+    padding: 1.5rem .6rem 1.2rem;
   }
-  ul{
+  ul.large {
+    display: none;
     margin: auto !important;
+    @include respond-to(medium) {
+      display: flex;
+    }
   }
 }
+
+.mobile-menu {
+  position: absolute;
+  right: 1.5rem;
+  top: .7rem;
+  transition: all .2s ease;
+  @include respond-to(medium) {
+    display: none;
+  }
+  span {
+    display: block;
+    height: .3rem;
+    margin: 0.5rem;
+    width: 4rem;
+    background: #001E5D;
+    transition: all .2s;
+    will-change: opacity, transform;
+  }
+  &Content {
+    position: fixed;
+    z-index: 100;
+    background: #FFCE42;
+    top: 0;
+    right: 100vw;
+    transition: all .5s;
+    will-change: transform;
+    a {
+      display: block;
+      margin: 1rem;
+      color: #001E5D;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.open {
+  .mobile-menu {
+    span {
+      &:first-child {
+        transform: translateY(8px) rotate(-45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        transform: translateY(-8px) rotate(45deg);
+      }
+    }
+    &Content {
+      transform: translateX(100vw);
+    }
+  }
+  nav {
+    z-index: 1000;
+  }
+}
+
 

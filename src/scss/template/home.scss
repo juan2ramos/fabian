@@ -1,0 +1,61 @@
+.load-more {
+  max-width: 22rem;
+  margin: 4rem auto;
+  &Link {
+    color: var(--primary-color);
+  }
+  &Hr {
+    background: #ff0080;
+    margin: 0;
+    display: block;
+    width: 18rem;
+    height: .3rem;
+    float: right;
+  }
+}
+
+.Newsletter {
+  background: #FFCE42;
+  padding:  1rem;
+  @include respond-to(medium){
+    max-height: 20rem;
+    margin-top: 5rem;
+  }
+  &-container {
+    margin: auto;
+    max-width: 100rem;
+    position: relative;
+  }
+  &-image {
+    position: relative;
+    top: -7rem;
+    right: 0;
+    display: none;
+    @include respond-to(medium){
+      display: block;
+    }
+  }
+  &-h4{
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 1em;
+    @include respond-to(medium){
+      margin-top: 5rem;
+      line-height: .6em;
+    }
+  }
+  &-button{
+    min-width: auto;
+    margin-top: 1rem;
+    @include respond-to(medium){
+      margin-top: 0;
+    }
+  }
+  &-form{
+    max-width: 60rem;
+  }
+  &-input{
+    border: var(--primary-color) .3rem solid !important;
+    border-radius: 0 !important;
+  }
+}
