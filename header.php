@@ -93,7 +93,7 @@
             <li><a href="/fabian">Fabian</a></li>
             <li><a href="/tutoriales">Tutoriales</a></li>
             <li><a href="/recursos">Recursos</a></li>
-            <li><a href="/cursos">Cursos</a></li>
+            <li><a href="/cursos">Conferencias y talleres</a></li>
             <li><a href="/contacto">Contacto</a></li>
             <li><a href="">
                     <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg"

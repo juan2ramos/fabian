@@ -37,7 +37,7 @@
                     <p>Saca de aquí lo quen necesites.</p>
                 </li>
                 <li>
-                    <a href="/cursos">CURSOS</a>
+                    <a href="/cursos">CONFERENCIAS Y TALLERES</a>
                     <p>!Agendate¡ Si de pronto hay un evento cerca de ti.</p>
                 </li>
                 <li>
