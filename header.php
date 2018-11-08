@@ -114,7 +114,7 @@
             <li><a href="/fabian">Fabian</a></li>
             <li><a href="/tutoriales">Tutoriales</a></li>
             <li><a href="/recursos">Recursos</a></li>
-            <li><a href="/cursos">Cursos</a></li>
+            <li><a href="/cursos">Conferencias y talleres</a></li>
             <li><a href="/contacto">Contacto</a></li>
 
         </ul>
