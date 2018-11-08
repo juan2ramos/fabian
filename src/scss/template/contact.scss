@@ -1,0 +1,99 @@
+
+#map {
+  height: 80vh;
+  position: static !important;
+}
+.Map-content{
+  position: relative;
+  overflow: hidden;
+  &Image{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &H2{
+    z-index: 100;
+    margin-top:18rem;
+    display: none;
+    text-align: center;
+    &.show{
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &H3{
+    font-weight: bolder;
+    font-size: 2.4rem;
+    letter-spacing: -.1rem;
+    text-align: center;
+    @include respond-to(medium){
+      font-size: 3rem;
+    }
+  }
+  &Form{
+    background: var(--secondary-color);
+    z-index: 10;
+    padding: 2rem;
+    width: 100%;
+    max-width: 32rem;
+    margin: 15rem 1rem 0;
+    max-height: 31.6rem;
+    @include respond-to(medium){
+      margin: 13rem 1rem 0;
+      max-width: 37rem;
+    }
+    &.hide{
+      display: none;
+    }
+    input,textarea{
+      margin-bottom: 1rem !important;
+      padding: .8rem !important;
+    }
+    button{
+      width: 70%  !important;
+      min-width: 0  !important;
+      min-height: 0  !important;
+      border-radius: 4px  !important;
+      padding: .5rem 0  !important;
+    }
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.vc_row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.vc_section{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.flexslider{
+  overflow: hidden;
+  margin: 2rem 0 0 !important;
+  img{
+    height: auto;
+  }
+}
+.Contact {
+  padding: 4rem 0 0;
+  &-mail{
+    svg{
+      max-width: 4rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a{
+      color: var(--primary-color);
+    }
+  }
+  &-social{
+    span{
+      margin: 0 1rem;
+    }
+  }
+}
+

@@ -2,9 +2,15 @@
   color: white;
   background: var(--primary-color);
   padding: 0 1rem ;
+  margin-top: 9rem;
   @include respond-to(medium){
     height: 382px;
     margin-top: 12rem;
+  }
+  &-fuckContainer{
+    @include respond-to(medium){
+      margin-top: 6rem;
+    }
   }
   &-container {
     max-width: 100rem;
@@ -55,14 +61,17 @@
     margin: auto;
   }
   &-image {
-    position: absolute;
+    position: relative;
     top: -4rem;
+    @include respond-to(medium){
+      position: absolute;
+    }
   }
   &-figure {
-    display: none;
     position: relative;
+    order: -1;
     @include respond-to(medium){
-      display: block;
+     order: 0
     }
   }
   &-copy {

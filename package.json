@@ -38,7 +38,9 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "ajv": "^5.5.2",
     "animated-scroll-to": "^1.2.2",
+    "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "google-maps": "^3.3.0",
     "load-google-maps-api-2": "^1.0.2"

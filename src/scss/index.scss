@@ -67,27 +67,4 @@ p {
 @import "template/tutorials";
 @import "template/social";
 @import "template/means";
-#map {
-  height: 100%;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-.vc_row{
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.vc_section{
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.flexslider{
-  overflow: hidden;
-  margin: 2rem 0 0 !important;
-  img{
-    height: auto;
-  }
-}
-
+@import "template/contact";

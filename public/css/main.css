@@ -2262,11 +2262,15 @@ nav {
 .Footer {
   color: white;
   background: var(--primary-color);
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  margin-top: 9rem; }
   @media (min-width: 45rem) {
     .Footer {
       height: 382px;
       margin-top: 12rem; } }
+  @media (min-width: 45rem) {
+    .Footer-fuckContainer {
+      margin-top: 6rem; } }
   .Footer-container {
     max-width: 100rem;
     margin: auto; }
@@ -2305,14 +2309,21 @@ nav {
     font-weight: 400;
     margin: auto; }
   .Footer-image {
-    position: absolute;
+    position: relative;
     top: -4rem; }
+    @media (min-width: 45rem) {
+      .Footer-image {
+        position: absolute; } }
   .Footer-figure {
-    display: none;
-    position: relative; }
+    position: relative;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
     @media (min-width: 45rem) {
       .Footer-figure {
-        display: block; } }
+        -webkit-box-ordinal-group: 1;
+            -ms-flex-order: 0;
+                order: 0; } }
   .Footer-copy a {
     display: inline;
     color: red; }
@@ -2447,7 +2458,55 @@ nav {
   margin: 1rem 0; }
 
 #map {
-  height: 100%; }
+  height: 80vh;
+  position: static !important; }
+
+.Map-content {
+  position: relative;
+  overflow: hidden; }
+  .Map-contentImage {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .Map-contentH2 {
+    z-index: 100;
+    margin-top: 18rem;
+    display: none;
+    text-align: center; }
+    .Map-contentH2.show {
+      display: block;
+      max-width: 100%; }
+  .Map-contentH3 {
+    font-weight: bolder;
+    font-size: 2.4rem;
+    letter-spacing: -.1rem;
+    text-align: center; }
+    @media (min-width: 45rem) {
+      .Map-contentH3 {
+        font-size: 3rem; } }
+  .Map-contentForm {
+    background: var(--secondary-color);
+    z-index: 10;
+    padding: 2rem;
+    width: 100%;
+    max-width: 32rem;
+    margin: 15rem 1rem 0;
+    max-height: 31.6rem; }
+    @media (min-width: 45rem) {
+      .Map-contentForm {
+        margin: 13rem 1rem 0;
+        max-width: 37rem; } }
+    .Map-contentForm.hide {
+      display: none; }
+    .Map-contentForm input, .Map-contentForm textarea {
+      margin-bottom: 1rem !important;
+      padding: .8rem !important; }
+    .Map-contentForm button {
+      width: 70%  !important;
+      min-width: 0  !important;
+      min-height: 0  !important;
+      border-radius: 4px  !important;
+      padding: .5rem 0  !important; }
 
 html, body {
   height: 100%;
@@ -2467,5 +2526,16 @@ html, body {
   margin: 2rem 0 0 !important; }
   .flexslider img {
     height: auto; }
+
+.Contact {
+  padding: 4rem 0 0; }
+  .Contact-mail svg {
+    max-width: 4rem;
+    display: inline-block;
+    vertical-align: middle; }
+  .Contact-mail a {
+    color: var(--primary-color); }
+  .Contact-social span {
+    margin: 0 1rem; }
 
 /*# sourceMappingURL=main.css.map*/

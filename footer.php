@@ -1,7 +1,7 @@
 <?php $datos = get_option( 'settings_theme' ); ?>
 <footer class="Footer">
     <div class="Footer-container row">
-        <div class="col-m-6 col-16 margin-top-60">
+        <div class="col-m-6 col-16 Footer-fuckContainer">
             <h3 class="Footer-h3">¿QUIÉN <span class="Footer-fuck">PUTAS
                     <img src="<?php bloginfo('template_url') ?>/public/images/img-tachon.png" alt=""> </span> SOY YO?
             </h3>
@@ -15,7 +15,7 @@
                 <a href="" class="Footer-linkTutorials">¡EMPIEZA A VER MIS TUTORIALES!</a>
             </div>
         </div>
-        <figure class="col-6 Footer-figure">
+        <figure class="col-16 col-m-6  Footer-figure">
             <img class="Footer-image" src="<?php bloginfo( 'template_url' ) ?>/public/images/img-footer.png" alt="">
         </figure>
         <div class="col-m-4 col-16 Footer-links margin-top-8">
