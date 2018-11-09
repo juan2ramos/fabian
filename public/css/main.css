@@ -2538,4 +2538,66 @@ html, body {
   .Contact-social span {
     margin: 0 1rem; }
 
+.Blog {
+  padding-top: 14rem; }
+  .Blog-link {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color); }
+  @media (min-width: 45rem) {
+    .Blog-content {
+      padding-left: 24px; } }
+  .Blog-content h3 {
+    font-weight: 900;
+    margin-top: 2rem; }
+    @media (min-width: 45rem) {
+      .Blog-content h3 {
+        margin-top: 0; } }
+  .Blog-content span {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: black; }
+  .Blog-article {
+    margin: 0 0 3rem;
+    border-bottom: .1rem; }
+  .Blog-sidebar h4 {
+    color: var(--primary-color);
+    font-weight: 900; }
+  .Blog-sidebarList {
+    padding-left: .8rem;
+    font-weight: 300;
+    color: #000; }
+    .Blog-sidebarList li {
+      margin: .5rem; }
+      .Blog-sidebarList li::before {
+        content: "\2022";
+        color: var(--primary-color);
+        font-size: 3rem;
+        vertical-align: middle;
+        line-height: 0;
+        margin-right: 1rem; }
+  .Blog-box {
+    background: #EDEFF1;
+    padding: 1.2rem 1.5rem;
+    margin: 2.2rem 0; }
+  .Blog-articlesContent {
+    background: #EDEFF1;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 2.4rem; }
+
+.Tags li {
+  background: white;
+  padding: 6px;
+  font-size: 14px; }
+  .Tags li::before {
+    margin-right: .2rem; }
+
+.Blog-sidebarForm {
+  padding: 2rem;
+  border: .1rem solid #EDEFF1; }
+  .Blog-sidebarForm button {
+    padding: 1rem 2.2rem;
+    min-width: 100%; }
+
 /*# sourceMappingURL=main.css.map*/
