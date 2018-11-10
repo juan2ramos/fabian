@@ -86,7 +86,7 @@ var doll = document.querySelector('.Map-contentImage'),
 
 if (doll) {
     var interval = setInterval(frame, 1000);
-    doll.addEventListener('click', function () {
+    doll.addEventListener('click touchstart', function () {
         clearInterval(interval);
         ContactForm.classList.remove('hide');
         MapContentImageH2.classList.remove('show');
