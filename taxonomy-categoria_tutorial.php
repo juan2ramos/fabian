@@ -66,27 +66,24 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="margin-left-8">TUTORIALES</span>
+                    <span class="margin-left-8 is-text-uppercase">TUTORIALES - <?php single_term_title(); ?></span>
                 </h1>
             </div>
             <form action="" class="row col-16 Tutorials-form">
-                <select  class="Tutorials-select" name="" id="selectCategory">
+                <select class="Tutorials-select" name="" id="selectCategory">
                     <option value="">Elige un opción</option>
-		            <?php $categories = get_categories(array('taxonomy' => 'categoria_tutorial'));
-		            foreach ( $categories as $category ): ?>
-                        <option value="<?php echo get_category_link($category->term_id)?>"><?php echo $category->name ?></option>
-		            <?php endforeach ?>
+	                <?php $categories = get_categories(array('taxonomy' => 'categoria_tutorial'));
+	                foreach ( $categories as $category ): ?>
+                        <option
+                                <?php if(get_queried_object()->name == $category->name){ echo 'selected';}?>
+                                value="<?php echo get_category_link($category->term_id)?>"><?php echo $category->name ?></option>
+	                <?php endforeach ?>
 
                 </select>
             </form>
 			<?php
-			$args = array(
-				'post_type'      => 'tutorial',
-				'post_status'    => 'publish',
-				'posts_per_page' => 8,
-			);
-			$loop = new WP_Query( $args );
-			while ( $loop->have_posts() ) : $loop->the_post() ?>
+
+			while ( have_posts() ) : the_post(); ?>
                 <article class="col-m-5 col-16 Tutorials-article">
                     <img class="Tutorials-image"
                          src="<?php echo get_the_post_thumbnail_url( )?>" alt="">

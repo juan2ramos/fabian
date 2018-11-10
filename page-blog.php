@@ -4,27 +4,36 @@
         <section class="margin-top-60 col-m-11 col-16 row justify-between">
 			<?php echo do_shortcode( "[rev_slider alias='blog']" ); ?>
             <div class="Blog-articlesContent">
-				<?php for ( $i = 0; $i < 8; $i ++ ) : ?>
+				<?php
+				$args = array(
+					'post_type'      => 'post',
+					'post_status'    => 'publish',
+					'posts_per_page' => 8,
+				);
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post() ?>
                     <article class=" col-16 Blog-article row">
                         <figure class="col-m-6 col-16">
-                            <img src="<?php bloginfo( 'template_url' ) ?>/public/images/<?php echo $i + 1 ?>.jpg"
+                            <img class="Blog-articleImg"
+                                 src="<?php echo get_the_post_thumbnail_url() ?>"
                                  alt="">
                         </figure>
                         <div class="col-m-10 col-16 Blog-content">
-                            <h3>Este es un título del blog de Fabian el publicista </h3>
+                            <h3><?php the_title() ?> </h3>
                             <div class="margin-top-28 margin-bottom-20">
-                                <span> FABIAN EL PUBLICISTA • </span>
-                                <span> NOVIEMBRE 12, 2017 • </span>
-                                <span> 1 COMENTARIO </span>
+                                <span class="is-text-uppercase"> <?php the_author() ?> • </span>
+                                <span class="is-text-uppercase"> <?php the_date( 'M d, Y' ); ?> • </span>
+                                <span class="is-text-uppercase"><?php echo wp_count_comments( $post->ID )->approved; ?>
+                                    COMENTARIOS
+                                </span>
                             </div>
-                            <p>Lorem ipsum dolor amet crucifix farm-to-table banh mi, live-edge forage succulents synth
-                                retro austin waistcoat jean shorts.Lorem ipsum dolor amet crucifix farm-to-table banh
-                                mi, live-edge forage succulents synth retro austin waistcoat jean shorts. Quinoa tacos
-                                four loko, venmo beard kinfolk tbh marfa cronut viral. Celiac flannel enamel pin tumeric
-                                narwhal man bun. Ennui flexitarian deep. <a class="Blog-link" href="">Leer Más >></a> </p>
+                            <p><?php echo excerpt_tutorial( 510 ); ?> <a class="Blog-link"
+                                                                         href="<?php the_permalink() ?>">Leer Más >></a>
+                            </p>
                         </div>
                     </article>
-				<?php endfor; ?>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
             </div>
         </section>
         <div class="col-m-5 col-16 margin-top-16">

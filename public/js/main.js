@@ -133,6 +133,23 @@ if (MapEl) {
     });
 }
 
+var selectCategory = document.querySelector('#selectCategory');
+if (selectCategory) {
+    selectCategory.addEventListener('change', function () {
+        if (this.value) {
+            window.location.href = this.value;
+        }
+    });
+}
+var searchForm = document.querySelector('.Header-searchClose');
+var searchButton = document.querySelector('.Header-searchButton');
+searchButton.addEventListener('click', function () {
+    document.querySelector('.Header-search').classList.add('open');
+});
+searchForm.addEventListener('click', function () {
+    document.querySelector('.Header-search').classList.remove('open');
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {

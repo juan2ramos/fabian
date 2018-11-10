@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo( 'name' ); ?><?php wp_title(); ?></title>
+    <title>Tutoriales de Fabian el publicista | <?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php bloginfo( 'template_url' ) ?>/public/images/favicon.ico" type="image/x-icon"/>
     <link rel="icon" type="image/png" sizes="32x32"
@@ -51,9 +51,7 @@
             <a target="_blank" href="https://www.instagram.com/fabianelpublicista/">
 
 <svg width="32px" height="32px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
+
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="iconinstagram" fill="#001E5D" fill-rule="nonzero">
             <path d="M20.944,0 L7.056,0 C3.192,0 0,3.192 0,7.056 L0,20.944 C0,24.808 3.192,28 7.056,28 L20.944,28 C24.864,28 28,24.808 28,20.944 L28,7.056 C28,3.192 24.808,0 20.944,0 Z M24.976,20.944 C24.976,23.184 23.184,24.976 20.944,24.976 L7.056,24.976 C4.816,24.976 3.024,23.184 3.024,20.944 L3.024,7.056 C3.024,4.816 4.816,3.024 7.056,3.024 L20.944,3.024 C23.184,3.024 24.976,4.816 24.976,7.056 L24.976,20.944 Z" id="Shape"></path>
@@ -65,7 +63,7 @@
                 </a>
         </span>
         <span class="padding-top-4">
-            <a target="_blank" href="https://www.youtube.com/channel/UC6BTdM6cS_mMYWpVLai1QNA">
+            <a target="_blank" href="https://youtube.com/c/fabianelpublicista1">
 
 <svg width="32px" height="23px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
@@ -90,13 +88,13 @@
         </div>
         <ul class="large is-list-less row container row justify-end middle-items">
             <li><a href="/">Inicio</a></li>
-            <li><a href="/fabian">Fabian</a></li>
+            <li><a href="/fabian">¿Quién soy yo?</a></li>
             <li><a href="/tutoriales">Tutoriales</a></li>
             <li><a href="/recursos">Recursos</a></li>
             <li><a href="/cursos">Conferencias y talleres</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contacto">Contacto</a></li>
-            <li><a href="">
+            <li><a class="Header-searchButton">
                     <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -112,7 +110,7 @@
     <div class="mobile-menuContent row is-full-screen middle-items justify-center">
         <ul class="is-list-less">
             <li><a href="/">Inicio</a></li>
-            <li><a href="/fabian">Fabian</a></li>
+            <li><a href="/fabian">¿Quién soy yo?</a></li>
             <li><a href="/tutoriales">Tutoriales</a></li>
             <li><a href="/recursos">Recursos</a></li>
             <li><a href="/cursos">Conferencias y talleres</a></li>

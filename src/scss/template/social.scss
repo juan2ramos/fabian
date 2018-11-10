@@ -6,7 +6,7 @@
     background: #EDEFF1;
     border: .1rem solid #D9D9DD;
     padding: 1.2rem 1.5rem;
-    margin: 2.2rem 0;
+    margin: 0 0 2.2rem;
   }
   &-h4 {
     color: #1a1a1a;
@@ -32,5 +32,11 @@
     padding: 1rem 1.4rem;
     margin: 0 0 1rem;
     width: 100%;
+  }
+}
+.sfsi_widget {
+  position: relative;
+  .norm_row{
+    left: calc(50% - 98px);
   }
 }

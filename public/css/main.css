@@ -2207,6 +2207,97 @@ nav {
 .open nav {
   z-index: 1000; }
 
+.Header-search {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  will-change: transform;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  background: var(--secondary-color);
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw); }
+  .Header-search.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  .Header-search form {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 2rem; }
+  .Header-search button {
+    background: none;
+    min-width: 0;
+    padding: 0; }
+  .Header-search input {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid var(--primary-color) !important;
+    border-radius: 0 !important; }
+  .Header-searchClose {
+    cursor: pointer;
+    position: absolute;
+    right: 6rem;
+    top: 3rem; }
+    .Header-searchClose span {
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      position: absolute;
+      height: .3rem;
+      margin: 0.5rem;
+      width: 4rem;
+      background: #001E5D; }
+      .Header-searchClose span:first-child {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+      .Header-searchClose span:last-child {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+
+.comments-title {
+  display: none; }
+
+.comment-list {
+  list-style: none;
+  padding: 0; }
+
+.comment-body {
+  position: relative; }
+
+.commentmetadata {
+  position: relative;
+  right: 0;
+  top: 0; }
+  @media (min-width: 45rem) {
+    .commentmetadata {
+      position: absolute; } }
+
+#comments {
+  margin: 4rem 0 2rem; }
+  #comments p {
+    margin: 1rem 0; }
+  #comments .reply {
+    margin-bottom: 3rem; }
+  #comments a {
+    font-size: 1.4rem;
+    color: #4e4e4e;
+    font-weight: 300; }
+
+.tnp-widget input.tnp-submit {
+  color: var(--primary-color) !important;
+  background: var(--secondary-color) !important;
+  border-radius: .3rem  !important;
+  font-weight: 800  !important;
+  padding: 1rem 1.4rem  !important;
+  margin: 0 0 1rem  !important;
+  width: 100%  !important;
+  font-size: 1.5rem  !important; }
+
+.tnp-widget input[type=email] {
+  background: white !important; }
+
 .load-more {
   max-width: 22rem;
   margin: 4rem auto; }
@@ -2219,6 +2310,12 @@ nav {
     width: 18rem;
     height: .3rem;
     float: right; }
+
+.Home-tutorials img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
 
 .Newsletter {
   background: #FFCE42;
@@ -2259,6 +2356,38 @@ nav {
     border: var(--primary-color) 0.3rem solid !important;
     border-radius: 0 !important; }
 
+.Home-article {
+  position: relative;
+  cursor: pointer; }
+  .Home-article:hover .Home-articleContent {
+    visibility: visible;
+    opacity: 1; }
+  .Home-articleContent {
+    -webkit-transition: .3s opacity;
+    transition: .3s opacity;
+    will-change: opacity;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ffce42d1;
+    visibility: hidden;
+    opacity: 0; }
+    .Home-articleContentLink {
+      position: absolute;
+      bottom: 1rem; }
+    .Home-articleContent h3 {
+      padding: 1rem;
+      font-size: 2.8rem;
+      font-weight: 900;
+      text-transform: uppercase; }
+    .Home-articleContent a {
+      color: white;
+      padding: 1rem;
+      font-size: 2.8rem;
+      font-weight: 900; }
+
 .Footer {
   color: white;
   background: var(--primary-color);
@@ -2297,7 +2426,8 @@ nav {
           display: block; } }
   .Footer-p {
     font-size: 1.4rem;
-    font-weight: 100; }
+    font-weight: 100;
+    text-align: justify; }
   .Footer-h3 {
     font-weight: 800;
     font-size: 3rem;
@@ -2348,7 +2478,8 @@ nav {
   color: #b5b5b5; }
 
 .Tutorials-article {
-  margin: 1.6rem 0; }
+  margin: 1.6rem 0;
+  min-height: 34rem; }
   .Tutorials-articleInfo {
     background: #EDEFF1;
     padding: 1rem 1.6rem; }
@@ -2358,7 +2489,8 @@ nav {
   font-size: 1.8rem; }
 
 .Tutorials-p {
-  color: #959496; }
+  color: #959496;
+  min-height: 5.4rem; }
 
 .Tutorials-image {
   -o-object-fit: cover;
@@ -2386,7 +2518,7 @@ nav {
   background: #EDEFF1;
   border: .1rem solid #D9D9DD;
   padding: 1.2rem 1.5rem;
-  margin: 2.2rem 0; }
+  margin: 0 0 2.2rem; }
 
 .Social-h4 {
   color: #1a1a1a;
@@ -2412,6 +2544,11 @@ nav {
   padding: 1rem 1.4rem;
   margin: 0 0 1rem;
   width: 100%; }
+
+.sfsi_widget {
+  position: relative; }
+  .sfsi_widget .norm_row {
+    left: calc(50% - 98px); }
 
 .Means-h1 {
   margin: 2rem 0 1rem; }
@@ -2540,6 +2677,8 @@ html, body {
 
 .Blog {
   padding-top: 14rem; }
+  .Blog-h1 {
+    color: var(--primary-color); }
   .Blog-link {
     font-size: 1.6rem;
     font-weight: bold;
@@ -2559,7 +2698,17 @@ html, body {
     color: black; }
   .Blog-article {
     margin: 0 0 3rem;
-    border-bottom: .1rem; }
+    border-bottom: 1px solid;
+    padding-bottom: 3rem; }
+    .Blog-article:last-child {
+      margin: 0;
+      border-bottom: none;
+      padding-bottom: 0; }
+    .Blog-articleImg {
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 28.7rem;
+      height: 28.7rem; }
   .Blog-sidebar h4 {
     color: var(--primary-color);
     font-weight: 900; }
@@ -2599,5 +2748,66 @@ html, body {
   .Blog-sidebarForm button {
     padding: 1rem 2.2rem;
     min-width: 100%; }
+
+.Blog-titleImage img {
+  width: 4rem;
+  margin-right: 1rem; }
+
+.Blog-titleImage h2 {
+  font-size: 2.8rem; }
+
+.Blog-title {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  border-bottom: 1px solid #c7c7c7; }
+  .Blog-titleAuthor {
+    border-bottom: 1px solid #c7c7c7;
+    padding-bottom: 6px;
+    color: #6C6D6E;
+    font-weight: 600;
+    font-size: 1.4rem; }
+
+.Blog-tags {
+  margin: 1rem 0; }
+  .Blog-tags a {
+    border: 1px solid #6C6D6E;
+    border-radius: .2rem;
+    padding: .1rem 1rem;
+    color: #6C6D6E;
+    font-weight: 300;
+    margin-right: .8rem; }
+
+.Blog-contentPost img {
+  height: auto; }
+
+.tag {
+  display: block;
+  border: none;
+  text-transform: inherit;
+  color: inherit;
+  padding: inherit;
+  line-height: inherit;
+  letter-spacing: inherit; }
+
+.Search {
+  padding-left: .8rem;
+  font-weight: 300;
+  color: #000; }
+  .Search h3 {
+    font-weight: 900;
+    margin-bottom: 0;
+    text-transform: uppercase; }
+  .Search span {
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 1rem; }
+  .Search li {
+    margin: .5rem; }
+    .Search li::before {
+      content: "\2022";
+      color: var(--primary-color);
+      font-size: 3rem;
+      vertical-align: middle;
+      margin-right: 1rem; }
 
 /*# sourceMappingURL=main.css.map*/

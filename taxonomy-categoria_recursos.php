@@ -1,36 +1,12 @@
-<?php
-/**
- */
+<?php get_header(); ?>
+<?php echo do_shortcode( "[rev_slider alias='recursos']" ); ?>
 
-get_header(); ?>
-<?php
-$slide = new RevSlide();
-$slide->initByID( get_post_meta( $post->ID )['slide_template'][0] );
-$slider = new RevSlider();
-$slider->initByID( $slide->getSliderID() );
-echo do_shortcode( $slider->getShortcode() );
-$postType = get_post_type();
-switch ( $postType ) {
-	case 'tutorial':
-		$title = "TUTORIALES";
-		break;
-	case 'post':
-		$title = 'BLOG';
-		break;
-	case 'recurso':
-		$title = "RECURSOS";
-		break;
-	default:
-		$title = "rr";
-}
-?>
 
-    <div class="container row margin-top-40">
-        <div class="row col-16 middle-items">
-            <figure class="Blog-titleImage">
-				<?php if ( $postType == 'tutorial' ): ?>
-                    <img src="<?php bloginfo( 'template_url' ) ?>/public/images/icontutoriales.svg" alt="">
-				<?php else: ?>
+    <main class="Means container row">
+
+        <section class="col-m-12 col-16 row justify-between">
+            <div class="col-16">
+                <h1 class="Means-h1 row middle-items">
                     <svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -49,45 +25,42 @@ switch ( $postType ) {
                             </g>
                         </g>
                     </svg>
-				<?php endif ?>
-            </figure>
-            <h2><?php echo $title; ?></h2>
-        </div>
+                    <span class="margin-left-8 is-text-uppercase">RECURSOS - <?php single_term_title(); ?></span>
+                </h1>
+            </div>
+            <form action="" class="row col-16 Means-form">
+                <select class="Means-select" name="" id="selectCategory">
+                    <option value="">Elige un opción</option>
+		            <?php $categories = get_categories(array('taxonomy' => 'categoria_recursos'));
+		            foreach ( $categories as $category ): ?>
+                        <option
+				            <?php if(get_queried_object()->name == $category->name){ echo 'selected';}?>
+                                value="<?php echo get_category_link($category->term_id)?>"><?php echo $category->name ?></option>
+		            <?php endforeach ?>
 
-        <section class="col-m-11 col-16">
-            <h1 class="Blog-title margin-top-32"><?php the_title() ?> </h1>
-            <article>
-				<?php while ( have_posts() ) :the_post(); ?>
-                    <div class="row Blog-titleAuthor">
-                        <div class="col-8">Por: <span><?php the_author() ?> </span></div>
-                        <div class="date col-8 is-text-right"><?php echo the_date( 'd M Y' ); ?></div>
-                    </div>
-                    <div class="Blog-tags row">
-						<?php $tags = get_tags( $post );
-						foreach ( $tags as $tag ):?>
-                            <span>
-                            <a href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
-                            </span>
-						<?php endforeach; ?>
-                    </div>
-                    <div class="Blog-contentPost margin-top-28">
-						<?php the_content() ?>
-                    </div>
-				<?php endwhile; ?>
-                <div >
-					<?php comments_template(); ?>
-                </div>
+                </select>
 
-            </article>
-
+            </form>
+			<?php
+			while ( have_posts() ) : the_post(); ?>
+                <article class="col-m-5 col-16 Means-article">
+                    <img class="Means-image"
+                         src="<?php echo get_the_post_thumbnail_url( )?>" alt="">
+                    <div class="Means-articleInfo">
+                        <h2 class="Means-h2 is-text-uppercase"><?php the_title()?></h2>
+                        <p class="Means-p"><?php echo excerpt_tutorial(110);?> </p>
+                        <div class="row justify-end">
+                            <a href="<?php the_permalink()?>" class="Means-button">Ver más</a>
+                        </div>
+                    </div>
+                </article>
+			<?php endwhile;
+			wp_reset_postdata(); ?>
         </section>
-        <div class="col-m-4 col-16 ">
+        <div class="col-m-4 col-16 margin-top-16">
 			<?php get_sidebar(); ?>
         </div>
-    </div>
 
-<?php
+    </main>
 
-
-//get_sidebar();
-get_footer();
+<?php get_footer();

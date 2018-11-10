@@ -123,4 +123,106 @@ nav {
   }
 }
 
+.Header-search {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  will-change: transform;
+  transition: all .4s;
+  background: var(--secondary-color);
+  transform: translateX(100vw);
+  &.open {
+    transform: translateX(0);
+  }
+  form {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 2rem;
+  }
+  button {
+    background: none;
+    min-width: 0;
+    padding: 0;
+  }
+  input {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid var(--primary-color) !important;
+    border-radius: 0 !important;
+  }
+  &Close {
+    cursor: pointer;
+    position: absolute;
+    right: 6rem;
+    top: 3rem;
+    span {
+      transform-origin: center;
+      position: absolute;
+      height: .3rem;
+      margin: 0.5rem;
+      width: 4rem;
+      background: #001E5D;
+      &:first-child {
+        transform: rotate(-45deg);
+      }
+      &:last-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
 
+.comments-title {
+  display: none;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-body {
+  position: relative;
+}
+
+.commentmetadata {
+  position: relative;
+  right: 0;
+  top: 0;
+  @include respond-to(medium){
+    position: absolute;
+  }
+
+}
+
+#comments {
+  margin: 4rem 0 2rem;
+  p {
+    margin: 1rem 0;
+  }
+  .reply {
+    margin-bottom: 3rem;
+  }
+  a {
+    font-size: 1.4rem;
+    color: #4e4e4e;
+    font-weight: 300;
+  }
+
+}
+.tnp-widget input.tnp-submit{
+  color: var(--primary-color)  !important  ;
+  background: var(--secondary-color)  !important;
+  border-radius: .3rem  !important;
+  font-weight: 800  !important;
+  padding: 1rem 1.4rem  !important;
+  margin: 0 0 1rem  !important;
+  width: 100%  !important;
+  font-size: 1.5rem  !important;
+}
+.tnp-widget input[type=email]{
+  background: white !important;
+}

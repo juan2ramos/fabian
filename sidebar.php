@@ -1,18 +1,14 @@
 <aside class="Social">
-    <figure>
-        <img style="max-width: 250px; margin: auto;display: block"
-             src="<?php bloginfo( 'template_url' ) ?>/public/images/social.png" alt="">
-    </figure>
+
+		<?php dynamic_sidebar( 'Sidebar-social' ); ?>
+
     <div class="Social-newsletter">
         <h4 class="Social-h4">Anda pendiente de lo que pasa</h4>
-        <p class="Social-p">Suscribite, y apenas tengamos noticias de nuevos tutoriales, noticias y demas, te las
-            enviaremos al correo. No te pierdas
-            nada de lo que pasa acá. </p>
-        <form action="">
-            <input type="email" class="Social-input" placeholder="Tu correo electrónico">
-            <div class="row justify-center">
-                <button class="Social-button" type="submit">¡Suscribame pues!</button>
-            </div>
-        </form>
+        <p class="Social-p"> Mantente al tanto de todo. Suscríbete a mi página web y recibe en tu correo noticias sobre
+            nuevos tutoriales, recursos y talleres que siempre traigo para ti. </p>
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+			<?php dynamic_sidebar( 'sidebar-1' ); ?>
+		<?php endif; ?>
     </div>
+
 </aside>

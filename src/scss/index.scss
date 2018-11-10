@@ -35,7 +35,7 @@ body {
   overflow-x: hidden;
 }
 
-h1{
+h1 {
   font-weight: 800;
   font-size: 2.8rem;
 }
@@ -52,14 +52,13 @@ h3 {
 p {
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.4rem ;
+  font-size: 1.4rem;
   letter-spacing: inherit;
 }
 
 .middle-items {
   align-items: center !important;
 }
-
 
 @import "template/header";
 @import "template/home";
@@ -69,3 +68,39 @@ p {
 @import "template/means";
 @import "template/contact";
 @import "template/blog";
+
+.tag {
+  display: block;
+  border: none;
+  text-transform: inherit;
+  color: inherit;
+  padding: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.Search {
+  padding-left: .8rem;
+  font-weight: 300;
+  color: #000;
+  h3{
+    font-weight: 900;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  span{
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin: .5rem;
+    &::before {
+      content: "\2022";
+      color: var(--primary-color);
+      font-size: 3rem;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  }
+}

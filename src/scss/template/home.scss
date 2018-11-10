@@ -13,7 +13,14 @@
     float: right;
   }
 }
-
+.Home-tutorials{
+  img{
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
 .Newsletter {
   background: #FFCE42;
   padding:  1rem;
@@ -57,5 +64,41 @@
   &-input{
     border: var(--primary-color) .3rem solid !important;
     border-radius: 0 !important;
+  }
+}
+.Home-article{
+  position: relative;
+  cursor: pointer;
+  &:hover  &Content{
+    visibility: visible;
+    opacity: 1;
+  }
+  &Content{
+    transition: .3s opacity;
+    will-change: opacity;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ffce42d1;
+    visibility: hidden;
+    opacity: 0;
+    &Link{
+      position: absolute;
+      bottom: 1rem;
+    }
+    h3{
+      padding: 1rem;
+      font-size: 2.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    a{
+      color: white;
+      padding: 1rem;
+      font-size: 2.8rem;
+      font-weight: 900;
+    }
   }
 }

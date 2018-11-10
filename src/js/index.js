@@ -59,4 +59,21 @@ if (MapEl) {
     });
 }
 
+const selectCategory = document.querySelector('#selectCategory');
+if (selectCategory) {
+    selectCategory.addEventListener('change', function () {
+        if (this.value) {
+            window.location.href = this.value;
+        }
+    })
+}
+const searchForm = document.querySelector('.Header-searchClose');
+const searchButton = document.querySelector('.Header-searchButton');
+searchButton.addEventListener('click', function () {
+    document.querySelector('.Header-search').classList.add('open')
+});
+searchForm.addEventListener('click', function () {
+    document.querySelector('.Header-search').classList.remove('open')
+});
+
 

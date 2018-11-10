@@ -34,6 +34,15 @@ function template_widgets_init()
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ]);
+    register_sidebar([
+        'name' => esc_html__('Sidebar-social', 'template'),
+        'id' => 'Sidebar-social',
+        'description' => esc_html__('Add widgets here.', 'template'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ]);
 }
 
 add_action('widgets_init', 'template_widgets_init');
@@ -61,75 +70,19 @@ function theme_js()
 }
 
 add_action('wp_enqueue_scripts', 'theme_js');
-/**
- * Create custom excerpt
- *
- * @param $count
- *
- * @return bool|string
- */
-function get_excerpt($count)
+
+function excerpt_tutorial($count)
 {
-    //$permalink = get_permalink($post->ID);
     $excerpt = get_the_content();
     $excerpt = strip_tags($excerpt);
-    $excerpt = substr($excerpt, 0, $count);
-    $excerpt = $excerpt . '...';
-
-    return $excerpt;
+    return substr($excerpt, 0, $count);
 }
-
-
-
-add_action('customize_register', 'customize_register_theme');
-
-
-function customize_register_theme($wp_customize)
+function excerpt_blog($count)
 {
-    $wp_customize->add_section('settings_theme', array(
-        'title' => __('Configuración Guayacan', 'guayacan'),
-        'priority' => 35
-    ));
-
-    //tel
-    $wp_customize->add_setting('settings_theme[phone]', array(
-        'default' => '',
-        'capability' => 'edit_theme_options',
-        'type' => 'option',
-        'transport' => 'postMessage'
-    ));
-    $wp_customize->add_control('phone', array(
-        'label' => __('Teléfono', 'guayacan'),
-        'section' => 'settings_theme',
-        'settings' => 'settings_theme[phone]',
-    ));
-    //face
-    $wp_customize->add_setting('settings_theme[face]', array(
-        'default' => '',
-        'capability' => 'edit_theme_options',
-        'type' => 'option',
-        'transport' => 'postMessage'
-    ));
-    $wp_customize->add_control('guayacan_face', array(
-        'label' => __('Facebook', 'guayacan'),
-        'section' => 'settings_theme',
-        'settings' => 'settings_theme[face]',
-    ));
-    //ins
-    $wp_customize->add_setting('settings_theme[ins]', array(
-        'default' => '',
-        'capability' => 'edit_theme_options',
-        'type' => 'option',
-        'transport' => 'postMessage'
-    ));
-    $wp_customize->add_control('guayacan_ins', array(
-        'label' => __('Instagram', 'guayacan'),
-        'section' => 'settings_theme',
-        'settings' => 'settings_theme[ins]',
-    ));
+    $excerpt = get_the_content();
+    $excerpt = strip_tags($excerpt);
+    return substr($excerpt, 0, $count);
 }
-
-
 
 
 

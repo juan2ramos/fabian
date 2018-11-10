@@ -1,43 +1,33 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+    <main class="Blog  container row ">
+        <section class="margin-top-60 col-m-11 col-16">
+            <h1 class="Blog-h1">
+				<?php
+				printf( esc_html__( '  Resultado de búsqueda: %s', 'mintecceramic' ), '<span>' . get_search_query() . '</span>' );
+				?>
+            </h1>
+            <ul class="Search is-list-less">
+				<?php
 
-		<?php
-		if ( have_posts() ) : ?>
+				while ( have_posts() ) : the_post();
+					?>
+                    <li class=" col-16  row middle-items">
+                        <a class="Blog-link" href="<?php the_permalink() ?>">
+                            <h3><?php the_title() ?> </h3>
+                            <span class="is-text-uppercase"> <?php the_author() ?> • </span>
+                            <span class="is-text-uppercase"> <?php the_date( 'M d, Y' ); ?> • </span>
+                            <span class="is-text-uppercase"> 1 <?php get_comments_number() ?> COMENTARIO </span>
+                        </a>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'mintecceramic' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
+                    </li>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
+            </ul>
+        </section>
+        <div class="col-m-5 col-16 margin-top-16">
+			<?php get_sidebar( 'blog' ); ?>
+        </div>
+    </main>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

@@ -4,12 +4,12 @@
         <section class="margin-top-60 col-m-11 col-16 row justify-between">
 			<?php echo do_shortcode( "[rev_slider alias='blog']" ); ?>
 
-            <h1 class="col-16 Blog-h1">Categoría: <?php single_tag_title(); ?></h1>
+            <h1 class="col-16 Blog-h1">Tag: <?php single_tag_title(); ?></h1>
             <div class="Blog-articlesContent">
 				<?php
 
 				while ( have_posts() ) : the_post();
-					?>
+				?>
                     <article class=" col-16 Blog-article row">
                         <figure class="col-m-6 col-16">
                             <img class="Blog-articleImg"
