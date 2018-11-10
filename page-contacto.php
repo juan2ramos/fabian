@@ -3,16 +3,11 @@
     <div class="Map-content row justify-center ">
         <div id="map"></div>
         <h2 class="Map-contentH2 show">ATRÁPAME PÁ CONTACTARME</h2>
-        <form action="" class="Map-contentForm hide" id="ContactForm">
+        <div class="Map-contentForm hide" id="ContactForm">
             <h3 class="Map-contentH3">HABLÉMONOS UN POCO</h3>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo">
-            <input type="text" placeholder="Número de contacto">
-            <textarea name="" id="" placeholder="Mensaje"></textarea>
-            <div class="row justify-center">
-                <button type="submit">ENVIAR</button>
-            </div>
-        </form>
+			<?php echo do_shortcode( "[contact-form-7 id=\"5\" title=\"Formulario de contacto 1\"]" ); ?>
+        </div>
+
         <figure data-image="<?php bloginfo( 'template_url' ) ?>/public/images/faboatrapado.png"
                 class="Map-contentImage">
             <img
@@ -23,14 +18,21 @@
     <main class=" Contact container row  justify-center middle-items">
         <div class="Contact-mail col-16 col-m-5 is-text-center">
             <a href="mailto:hola@fabianelpublicista.co">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 45.3 40" style="enable-background:new 0 0 45.3 40;" xml:space="preserve">
 <style type="text/css">
-    .st0{fill:#FFCD50;}
-    .st1{fill:#FF1E5D;}
+    .st0 {
+        fill: #FFCD50;
+    }
+
+    .st1 {
+        fill: #FF1E5D;
+    }
 </style>
                     <g>
-                        <ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 -2.6404 40.7347)" class="st0" cx="22.6" cy="21.9" rx="18.1" ry="18.1"/>
+                        <ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 -2.6404 40.7347)" class="st0" cx="22.6"
+                                 cy="21.9" rx="18.1" ry="18.1"/>
                         <g>
                             <g>
                                 <g>
@@ -100,7 +102,7 @@
                 </a>
         </span>
             <span class="padding-top-4">
-            <a target="_blank" href="https://www.youtube.com/channel/UC6BTdM6cS_mMYWpVLai1QNA">
+            <a target="_blank" href="https://www.youtube.com/c/fabianelpublicista1">
 
 <svg width="32px" height="23px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">

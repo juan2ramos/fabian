@@ -2651,6 +2651,8 @@ nav {
         max-width: 37rem; } }
     .Map-contentForm.hide {
       display: none; }
+    .Map-contentForm textarea {
+      height: 5rem; }
     .Map-contentForm input, .Map-contentForm textarea {
       margin-bottom: 1rem !important;
       padding: .8rem !important; }

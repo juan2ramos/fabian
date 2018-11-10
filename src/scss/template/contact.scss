@@ -6,6 +6,7 @@
 .Map-content{
   position: relative;
   overflow: hidden;
+
   &Image{
     position: absolute;
     top: 0;
@@ -44,6 +45,9 @@
     }
     &.hide{
       display: none;
+    }
+    textarea{
+      height: 5rem;
     }
     input,textarea{
       margin-bottom: 1rem !important;
