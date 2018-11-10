@@ -23,15 +23,9 @@
             <button type="submit">Buscar</button>
         </div>
     </form>
+
     <div class="Blog-box">
-        <h4 class="Social-h4 ">COMENTARIOS RECIENTES</h4>
-        <ul class="Blog-sidebarList is-list-less">
-            <li>Mustache fixie chillwave dolor butcher</li>
-            <li>Paleo umami stumptown dolor irony</li>
-            <li>Hashtag lomo blue bottle typewriter.</li>
-            <li>Lomo blue bottle typewriter shoreditch.</li>
-            <li>Lomo blue bottle typewriter shoreditch.</li>
-        </ul>
+	    <?php dynamic_sidebar( 'comment-sidebar' ); ?>
     </div>
     <div class="Blog-box">
         <h4 class="Social-h4 ">CATEGORÍAS</h4>

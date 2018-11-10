@@ -2298,6 +2298,22 @@ nav {
 .tnp-widget input[type=email] {
   background: white !important; }
 
+#recentcomments {
+  padding-left: .8rem;
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  list-style: none; }
+  #recentcomments li {
+    margin: .5rem; }
+  #recentcomments li::before {
+    content: "\2022";
+    color: var(--primary-color);
+    font-size: 3rem;
+    vertical-align: middle;
+    line-height: 0;
+    margin-right: 1rem; }
+
 .load-more {
   max-width: 22rem;
   margin: 4rem auto; }

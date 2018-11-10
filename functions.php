@@ -43,6 +43,15 @@ function template_widgets_init()
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ]);
+    register_sidebar([
+        'name' => esc_html__('comment-sidebar', 'template'),
+        'id' => 'comment-sidebar',
+        'description' => esc_html__('Add widgets here.', 'template'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h4 class="Social-h4  is-text-uppercase widget-title">',
+        'after_title' => '</h4>',
+    ]);
 }
 
 add_action('widgets_init', 'template_widgets_init');
