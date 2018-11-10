@@ -31,8 +31,13 @@
             <div class="col-16 col-l-10">
                 <h4 class="Newsletter-h4">SE PARTE DEL EJERCITO GRÁFICO</h4>
                 <p class="Newsletter-p">sSuscríbete para informarte sobre nuevos tutoriales, recursos, talleres y noticias de tu interés.</p>
-                <form action="" class="row Newsletter-form">
-                    <input class=" col-16 col-m-12 Newsletter-input" type="text" placeholder="Escribe tu correo">
+
+
+                <form method="post" action="http://fabianelpublicista.co/?na=s" onsubmit="return newsletter_check(this)"  class="row Newsletter-form">
+                    <input type="hidden" name="nlang" value="">
+                    <input type="hidden" name="nr" value="widget">
+                    <input type="hidden" name="nl[]" value="0">
+                    <input class=" col-16 col-m-12 Newsletter-input" name="ne"  type="email" placeholder="Escribe tu correo">
                     <button type="submit" class=" col-16 col-m-4 Newsletter-button">Suscribete</button>
                 </form>
             </div>
