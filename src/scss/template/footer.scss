@@ -4,7 +4,7 @@
   padding: 0 1rem ;
   margin-top: 9rem;
   @include respond-to(medium){
-    height: 382px;
+    height: 396px;
     margin-top: 12rem;
   }
   &-fuckContainer{
@@ -63,7 +63,7 @@
   }
   &-image {
     position: relative;
-    top: -4rem;
+    top: -2.6rem;
     @include respond-to(medium){
       position: absolute;
     }
