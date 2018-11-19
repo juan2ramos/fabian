@@ -2395,9 +2395,12 @@ nav {
       bottom: 1rem; }
     .Home-articleContent h3 {
       padding: 1rem;
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 900;
       text-transform: uppercase; }
+      @media (min-width: 45rem) {
+        .Home-articleContent h3 {
+          font-size: 2.8rem; } }
     .Home-articleContent a {
       color: white;
       padding: 1rem;
@@ -2827,5 +2830,8 @@ html, body {
       font-size: 3rem;
       vertical-align: middle;
       margin-right: 1rem; }
+
+iframe {
+  max-width: 100%; }
 
 /*# sourceMappingURL=main.css.map*/
